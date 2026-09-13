@@ -7,7 +7,7 @@
     <meta name="keywords" content="tech, hackclub, malta">
     <meta name="color-scheme" content="light">
     <title>Kavallieri Hack Club</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 <style>
     :root {
         color-scheme: light;
@@ -54,7 +54,7 @@
 
     body {
         background-color: #1b1c2e;
-        background-image: url(bg.png);
+        background-image: url(assets/bg.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
@@ -191,7 +191,6 @@
         text-shadow: 0px 0px 16px rgba(255,255,255,0.3);
     }
 
-
     .button-group {
         animation: fade-up 0.6s;
     }
@@ -268,25 +267,87 @@
         box-shadow: 0 0px 16px 0 rgba(200,200,200,0.8);
     }
 
+    .insta {
+        --bg-x: 0%;
+        --bg-y: 0%;
+        background-image: linear-gradient(135deg, #7419fb 0%, #f82689 51%, #fda704 100%);
+        background-size: 200% auto;
+        background-position: var(--bg-x) var(--bg-y);
+        font-family: "sansy", "Arial";
+        text-align: center;
+        color: #FFFFFF;
+        text-decoration: none;
+        border: none;
+        border-radius: 50px;
+        padding: 10px;
+        padding-bottom: 7px;
+        padding-top: 10px;
+        cursor: pointer;
+        font-size: 1vw;
+        transition-duration: 0.15s;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1);
+    }
+
+    .insta:hover {
+        padding: 12px;
+        padding-bottom: 9px;
+        padding-top: 12px;
+        box-shadow: 0 0px 16px 0 rgba(206,77,131,0.8);
+    }
+
+    .hackclub,
+    .hackclub:visited,
+    .hackclub:active {
+        background: linear-gradient(90deg, #EB3750 50%, #e0346a 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        text-decoration: none;
+        transition-duration: 0.3s;
+        text-shadow: 0px 0px 8px rgba(235, 55, 80,0);
+    }
+
+    .hackclub:hover {
+        text-shadow: 0px 0px 12px rgba(235, 55, 80,1);
+    }
+
+    .whatisit {
+        animation: fade-up 0.8s;
+        font-size: 2vw;
+        width: 50%;
+        margin: 0 auto;
+        padding-top: 0px;
+        padding-bottom: 24px;
+        font-weight: normal;
+    }
+
+    footer {
+        width: 100%;
+        background-color: #1b1c2e;
+    }
+
+    .container {
+        column-count: 2;
+        column-width: auto;
+    }
+
     @media (min-width: 769px) {
-        .tagline-mobile, .going-mobile, .p4 {
+        .p4 {
+            font-size: 0.3vw;
+        }
+
+        .text-mobile {
             display: none;
         }
     }
 
     @media (max-width: 768px) {
 
-        .tagline-desktop {
+        .text-desktop {
            display: none;
         }
-        .tagline-mobile {
-           display: block;
-        }
-
-        .going-desktop {
-           display: none;
-        }
-        .going-mobile {
+        .text-mobile {
            display: block;
         }
 
@@ -333,56 +394,68 @@
             width: 60%;
         }
 
+        .insta {
+            font-size: 6vw;
+            width: 40%;
+        }
+
         .p3 {
             font-size: 0.2vw;
             padding: 5px;
         }
 
-        .p4 {
-            display: none;
+        .container {
+            column-count: 1;
         }
 
     }
 
-        @media (max-width: 480px) {
-            .topbar h1 {
-                margin: 10px;
-                font-size: 7vw;
-            }
-
-            .button-group {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 5px;
-            }
-
-            .joinclub {
-                font-size: 6vw;
-                width: 50%;
-            }
-
-            .gitHub {
-                font-size: 6vw;
-                width: 60%;
-            }
-
-            .discord {
-                font-size: 6vw;
-                width: 60%;
-            }
-
-            .p3 {
-                display: none;
-            }
-
-            .p4 {
-                display: inline-block;
-            }
-
-
-
+    @media (max-width: 480px) {
+        .topbar h1 {
+            margin: 10px;
+            font-size: 7vw;
         }
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .joinclub {
+            font-size: 6vw;
+            width: 50%;
+        }
+
+        .gitHub {
+            font-size: 6vw;
+            width: 60%;
+        }
+
+        .discord {
+            font-size: 6vw;
+            width: 60%;
+        }
+
+        .insta {
+            font-size: 6vw;
+            width: 40%;
+        }
+
+        .p3 {
+            display: none;
+        }
+
+        .p4 {
+            display: inline-block;
+        }
+
+        .container {
+            column-count: 1;
+        }
+    }
+
 </style>
 
 </head>
@@ -433,15 +506,16 @@
                       #.                          .#
         </pre>
     </div>
-    <p class="tagline-desktop">Malta's first hack club.<br><b>By teens, for teens.</b></p>
-    <p class="tagline-mobile">Malta's first<br>hack club.<br><b>By teens, for teens.</b></p>
+    <p class="text-desktop">Malta's first hack club.<br><b>By teens, for teens.</b></p>
+    <p class="text-mobile">Malta's first<br>hack club.<br><b>By teens, for teens.</b></p>
     <div class="button-group">
         <a href="https://clubs.hackclub.com/auth/member?join=SJZHHN" class="joinclub">Join the club!</a>
         <a href="https://github.com/kavallieri/the-website" class="gitHub">This site's GitHub</a>
         <a href="https://discord.gg/dYhZfYC6kw" class="discord">Join our Discord!</a>
+        <a href="https://instagram.com/kavallieri.hackclub" class="insta">Follow us!</a>
     </div>
-    <p class="going-desktop">What's going on?</p>
-    <p class="going-mobile">What's<br>going on?</p>
+    <p class="text-desktop">What's going on?</p>
+    <p class="text-mobile">What's<br>going on?</p>
     <div class="happenings">
         <a href="https://haven.hackclub.com/#about" class="haven">
             <img id="haven" src="">
@@ -449,7 +523,16 @@
             <h2>A global game jam. New friends, new skills, and free food!</h2>
         </a>
     </div>
-    <pre class="p4" id="asciiArt2">
+    <div>
+        <p class="text-desktop">What <i>is</i> <b>Hack Club</b>?</p>
+        <p class="text-mobile">What <i>is</i><br> <b>Hack Club</b>?</p>
+        <p class="whatisit"><a href="https://hackclub.com" class="hackclub">Hack Club</a> is the world's largest nonprofit movement of teenagers making cool projects.</p>
+        <p class="whatisit">Hack Club empowers teens to actually <b>create.</b> <br>Our community is based on the simple concept of <b>making, learning,</b> and getting good at <br><b>what you love.</b></p>
+        <p class="whatisit">You can learn more on Hack Club's<br> <a href="https://hackclub.com/philosophy" class="hackclub">philosophy page.</a></p>
+    </div>
+    <footer>
+        <div class="container">
+            <pre class="p4" id="asciiArt2">
                      (                              .
                       ##.                         ##
                        ####.                   ####.
@@ -493,7 +576,11 @@
                       #.                          .#
 
                           Made with ♥ by Matteo
-        </pre>
+            </pre>
+            <p>Contact us</p>
+            <a href="mailto:kavallieri.hc@gmail.com" class="discord">Email Us</a>
+        </div>
+    </footer>
     <script>
         const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789#&%$=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789#&%$=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789#&%$=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789#&%$=☻';
 
@@ -507,6 +594,7 @@
         randomizeText('asciiArt');
         randomizeText('asciiArt2');
     </script>
+
     <script>
         const images = ["assets/food-3.jpg","assets/friends-1.jpg","assets/friends-2.jpg","assets/friends3.jpg"]
 
@@ -518,5 +606,23 @@
 
         randomizeImg('haven');
     </script>
+
+    <script>
+        const insta = document.querySelector('.insta');
+
+        insta.addEventListener('mousemove', (e) => {
+            const rect = insta.getBoundingClientRect();
+            const x = 100 - ((e.clientX - rect.left) / rect.width) * 100;
+            const y = 100 - ((e.clientY - rect.top) / rect.height) * 100;
+            insta.style.setProperty('--bg-x', `${x}%`);
+            insta.style.setProperty('--bg-y', `${y}%`);
+        });
+
+        insta.addEventListener('mouseleave', () => {
+            insta.style.setProperty('--bg-x', '0%');
+            insta.style.setProperty('--bg-y', '0%');
+        });
+    </script>
+
 </body>
 </html>
