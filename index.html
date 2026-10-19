@@ -106,14 +106,14 @@
         align-items: flex-start;
         text-align: left;
         gap: 5px;
-        transition-duration: 0.2s;
+        transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         cursor: pointer;
         text-decoration: none;
         box-shadow: 0 0px 16px 0 rgba(246,211,45,0.1);
     }
 
     .haven:hover {
-        padding: 15px;
+        transform: scale(1.05);
         box-shadow: 0 0px 16px 0 rgba(246,211,45,0.6);
     }
 
@@ -192,6 +192,12 @@
     }
 
     .button-group {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin: auto auto;
+        justify-content: center;
+        gap: 10px;
         animation: fade-up 0.6s;
     }
 
@@ -208,14 +214,12 @@
         padding-top: 10px;
         cursor: pointer;
         font-size: 1vw;
-        transition-duration: 0.15s;
+        transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         box-shadow: 0 0px 16px 0 rgba(0,0,0,0.1);
     }
 
     .joinclub:hover {
-        padding: 12px;
-        padding-bottom: 9px;
-        padding-top: 12px;
+        transform: scale(1.1);
         box-shadow: 0 0px 16px 0 rgba(235,55,80,0.6);
     }
 
@@ -232,22 +236,20 @@
         padding-top: 10px;
         cursor: pointer;
         font-size: 1vw;
-        transition-duration: 0.15s;
+        transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         box-shadow: 0 0px 16px 0 rgba(0,0,0,0.1);
     }
 
     .discord:hover {
-        padding: 12px;
-        padding-bottom: 9px;
-        padding-top: 12px;
+        transform: scale(1.1);
         box-shadow: 0 0px 16px 0 rgba(114,137,218,0.6);
     }
 
     .gitHub {
-        background-color: #FFFFFF;
+        background-color: white;
         font-family: "sansy", "Arial";
         text-align: center;
-        color: #000000;
+        color: black;
         text-decoration: none;
         border: none;
         border-radius: 50px;
@@ -256,19 +258,16 @@
         padding-top: 10px;
         cursor: pointer;
         font-size: 1vw;
-        transition-duration: 0.15s;
+        transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1);
     }
 
     .gitHub:hover {
-        padding: 12px;
-        padding-bottom: 9px;
-        padding-top: 12px;
+        transform: scale(1.1);
         box-shadow: 0 0px 16px 0 rgba(200,200,200,0.6);
     }
 
     .insta {
-
         --bg-x: 0%;
         --bg-y: 0%;
         background-image: linear-gradient(135deg, #7419fb 0%, #f82689 51%, #fda704 100%);
@@ -285,7 +284,7 @@
         padding-top: 10px;
         cursor: pointer;
         font-size: 1vw;
-        transition-duration: 0.15s;
+        transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1);
     }
 
@@ -671,15 +670,10 @@
 
         insta.addEventListener('mousemove', (e) => {
             const rect = insta.getBoundingClientRect();
-            const x = 100 - ((e.clientX - rect.left) / rect.width) * 100;
-            const y = 100 - ((e.clientY - rect.top) / rect.height) * 100;
+            const x = 100 - (((e.clientX - rect.left) / rect.width) * 100) * 0.7;
+            const y = 100 - (((e.clientY - rect.top) / rect.height) * 100) * 0.7;
             insta.style.setProperty('--bg-x', `${x}%`);
             insta.style.setProperty('--bg-y', `${y}%`);
-        });
-
-        insta.addEventListener('mouseleave', () => {
-            insta.style.setProperty('--bg-x', '0%');
-            insta.style.setProperty('--bg-y', '0%');
         });
     </script>
 
