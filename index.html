@@ -8,6 +8,10 @@
     <meta name="color-scheme" content="light">
     <title>Kavallieri Hack Club</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 <style>
     :root {
         color-scheme: light;
@@ -70,7 +74,7 @@
     p {
        animation: fade-up 0.6s;
        text-align: center;
-       font-size: 3vw;
+       font-size: 3.5vw;
        padding-top: 24px;
        padding-bottom: 24px;
        margin: 0;
@@ -106,7 +110,7 @@
         flex-direction: column;
         align-items: flex-start;
         text-align: left;
-        gap: 5px;
+        gap: 2px;
         transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         cursor: pointer;
         text-decoration: none;
@@ -122,6 +126,10 @@
         margin: 0px;
         color: #231700;
     }
+
+    .haven h2 {
+        font-weight: normal;
+    }
     
     .boba {
         animation: fade-up 0.8s;
@@ -136,7 +144,7 @@
         flex-direction: column;
         align-items: flex-start;
         text-align: left;
-        gap: 5px;
+        gap: 2px;
         transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         cursor: pointer;
         text-decoration: none;
@@ -153,11 +161,25 @@
         color: #FFE3BD;
     }
 
-    .haven, .boba {
-        width: 480px;
+    .boba h2 {
+        font-weight: normal;
     }
 
-    #haven, #boba {
+    .haven, .boba {
+        width: 36vw;
+    }
+
+    .mav {
+        animation: fade-up 0.8s;
+        transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        cursor: pointer;
+    }
+
+    .mav:hover {
+        transform: scale(1.05);
+    }
+
+    #haven, #boba, #mav {
         width: 100%;
         aspect-ratio: 16 / 9;
         object-fit: cover;
@@ -166,7 +188,7 @@
     }
 
     .p3 {
-        font-family: "Courier New", monospace;
+        font-family: "IBM Plex Mono", monospace;
         line-height: 1.1;
         font-size: 0.1vw;
         position: absolute;
@@ -180,7 +202,7 @@
     }
 
     .p4 {
-        font-family: "Courier New", monospace;
+        font-family: "IBM Plex Mono", monospace;
         line-height: 1.1;
         font-size: 0.5vw;
         text-align: left;
@@ -190,17 +212,31 @@
         white-space: pre;
     }
 
+    .hero-desktop {
+        font-size: 6vw;
+    }
+
+    .hero-mobile {
+        font-size: 12vw;
+    }
+
+    .text-desktop {
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+
     .topbar {
         animation: fade-down 0.8s;
-        font-family: "Courier New";
-        font-weight: bold;
+        font-family: "IBM Plex Mono", monospace;
+        font-weight: medium;
         top: 0;
         padding: 5px;
         text-align: center;
         backdrop-filter: blur(25px);
         background-color: #00000006;
         border-bottom-style: solid;
-        border-bottom-color: #FFFFFFAF;
+        border-bottom-width: 3px;
+        border-bottom-color: #FFFFFFAA;
         position: sticky;
         z-index: 10;
         overflow: hidden;
@@ -235,7 +271,7 @@
         width: 100%;
         margin: auto auto;
         justify-content: center;
-        gap: 10px;
+        gap: 15px;
         animation: fade-up 0.6s;
     }
 
@@ -247,11 +283,11 @@
         text-decoration: none;
         border: none;
         border-radius: 50px;
-        padding: 10px;
-        padding-bottom: 7px;
-        padding-top: 10px;
+        padding: 15px;
+        padding-bottom: 10px;
+        padding-top: 15px;
         cursor: pointer;
-        font-size: 1vw;
+        font-size: 1.5vw;
         transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         box-shadow: 0 0px 16px 0 rgba(0,0,0,0.1);
     }
@@ -269,11 +305,11 @@
         text-decoration: none;
         border: none;
         border-radius: 50px;
-        padding: 10px;
-        padding-bottom: 7px;
-        padding-top: 10px;
+        padding: 15px;
+        padding-bottom: 10px;
+        padding-top: 15px;
         cursor: pointer;
-        font-size: 1vw;
+        font-size: 1.5vw;
         transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         box-shadow: 0 0px 16px 0 rgba(0,0,0,0.1);
     }
@@ -291,11 +327,11 @@
         text-decoration: none;
         border: none;
         border-radius: 50px;
-        padding: 10px;
-        padding-bottom: 7px;
-        padding-top: 10px;
+        padding: 15px;
+        padding-bottom: 10px;
+        padding-top: 15px;
         cursor: pointer;
-        font-size: 1vw;
+        font-size: 1.5vw;
         transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1);
     }
@@ -317,11 +353,11 @@
         text-decoration: none;
         border: none;
         border-radius: 50px;
-        padding: 10px;
-        padding-bottom: 7px;
-        padding-top: 10px;
+        padding: 15px;
+        padding-bottom: 10px;
+        padding-top: 15px;
         cursor: pointer;
-        font-size: 1vw;
+        font-size: 1.5vw;
         transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1);
     }
@@ -354,9 +390,23 @@
         font-size: 2vw;
         width: 50%;
         margin: 0 auto;
-        padding-top: 0px;
-        padding-bottom: 24px;
+        padding: 0px;
         font-weight: normal;
+    }
+
+    .paragraph {
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+        margin: 0px;
+        gap: 20px;
+    }
+
+    .script {
+        font-family: "Playfair Display";
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1rem;
     }
 
     .contact-us {
@@ -364,7 +414,7 @@
     }
 
     .email-us {
-        font-family: "Courier New";
+        font-family: "IBM Plex Mono";
         font-size: 1.5vw;
         text-decoration: none;
         color: #FFFFFF;
@@ -402,12 +452,22 @@
         align-items: center;
     }
 
+    .spacer {
+        width: 20%;
+        height: 0.4vh;
+        background-color: #FFFFFF55;
+        backdrop-filter: blur(15px);
+        border-radius: 10px;
+        margin: auto auto;
+        margin-top: 20px;
+    }
+
     @media (min-width: 769px) {
         .p4 {
             font-size: 0.3vw;
         }
 
-        .text-mobile {
+        .text-mobile, .hero-mobile {
             display: none;
         }
     }
@@ -415,15 +475,23 @@
     @media (max-width: 768px) {
 
         .whatisit {
-            width: 60%;
+            width: 80%;
             font-size: 6vw;
         }
 
-        .text-desktop {
+        .spacer {
+            width: 20%;
+            height: 0.5vh;
+        }
+
+        .text-desktop, .hero-desktop {
            display: none;
         }
-        .text-mobile {
+
+        .text-mobile, .hero-mobile {
+           line-height: 0.9; 
            display: block;
+           padding-bottom: 10px;
         }
 
         .happenings {
@@ -451,7 +519,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 5px;
+            gap: 15px;
         }
 
         .joinclub {
@@ -500,8 +568,8 @@
         }
 
         .whatisit {
-            width: 65%;
-            font-size: 5vw;
+            width: 80%;
+            font-size: 6vw;
         }
 
         .button-group {
@@ -594,14 +662,18 @@
                       #.                          .#
         </pre>
     </div>
-    <p class="text-desktop">Malta's first hack club.<br><b>By teens, for teens.</b></p>
-    <p class="text-mobile">Malta's first<br>hack club.<br><b>By teens, for teens.</b></p>
+
+    <p class="hero-desktop">Malta's first hack club.<br><span class="script">By teens, for teens.</span></p>
+    <p class="hero-mobile">Malta's first<br>hack club.<br><span class="script">By teens, for teens.</span></p>
     <div class="button-group">
         <a href="https://clubs.hackclub.com/auth/member?join=SJZHHN" class="joinclub">Join the club!</a>
         <a href="https://github.com/kavallieri/the-website" class="gitHub">This site's GitHub</a>
         <a href="https://discord.gg/dYhZfYC6kw" class="discord">Join our Discord!</a>
         <a href="https://instagram.com/kavallieri.hackclub" class="insta">Follow us!</a>
     </div>
+
+    <div class="spacer"></div>
+
     <p class="text-desktop">What's going on?</p>
     <p class="text-mobile">What's<br>going on?</p>
     <div class="happenings">
@@ -616,18 +688,25 @@
             <h2>Build a website, ship it, and get free boba! 🧋</h2>
         </a>
     </div>
-    <div>
-        <p class="text-desktop">What <i>is</i> <b>Hack Club</b>?</p>
-        <p class="text-mobile">What <i>is</i><br> <b>Hack Club</b>?</p>
+
+    <div class="spacer"></div>
+
+    <p class="text-desktop">What <i>is</i> <b>Hack Club</b>?</p>
+    <p class="text-mobile">What <i>is</i><br> <b>Hack Club</b>?</p>
+    <div class="paragraph">
         <p class="whatisit"><a href="https://hackclub.com" class="hackclub">Hack Club</a> is the world's largest nonprofit movement of teenagers making cool projects.</p>
         <p class="whatisit">Hack Club empowers teens to actually <b>create.</b> <br>Our community is based on the simple concept of <b>making, learning,</b> and getting good at <br><b>what you love.</b></p>
         <p class="whatisit">You can learn more on Hack Club's<br> <a href="https://hackclub.com/philosophy" class="hackclub">philosophy page.</a></p>
     </div>
-    <div>
-        <p class="text-desktop">Kavallieri Hack Club</p>
-        <p class="text-mobile">Kavallieri <br>Hack Club</p>
+
+    <div class="spacer"></div>
+
+    <p class="text-desktop">Kavallieri Hack Club</p>
+    <p class="text-mobile">Kavallieri <br>Hack Club</p>
+    <div class="paragraph">
         <p class="whatisit">Kavallieri Hack Club is basically a branch of the international organisation.</p>
         <p class="whatisit">We are Malta's first ever Hack Club, founded in late August 2026, and physically based in <a href="https://www.jc.um.edu.mt/" class="hackclub">G.F. Abela Junior College</a></p>
+        <p></p>
     </div>
     <footer>
         <div class="container">
